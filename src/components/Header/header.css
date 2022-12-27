@@ -1,0 +1,31 @@
+@import "../../../src/globals.css";
+
+* {
+	--header-padding-top: 12px;
+	--header-padding-left: 24px;
+	--header-height: 24px;
+}
+
+.storybook-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+
+	color: var(--color-g-text-primary);
+
+	height: calc(80px - var(--header-padding-top) * 2);
+
+	padding: var(--header-padding-top) var(--header-padding-left);
+
+	border-bottom: var(--color-g-bg-secondary) 1px solid;
+	background: var(--color-g-bg-overflow);
+}
+
+.storybook-header-title {
+	font-size: 18px;
+	font-weight: 500;
+}
