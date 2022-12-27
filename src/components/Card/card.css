@@ -1,0 +1,7 @@
+@import "../../../src/globals.css";
+
+.storybook-card {
+	background: #fff;
+	border-radius: 12px;
+	padding: 16px;
+}
