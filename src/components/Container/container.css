@@ -1,0 +1,24 @@
+@import "../../../src/globals.css";
+
+.storybook-container {
+	max-width: 1440px;
+	margin: auto;
+}
+
+@media screen and (max-width: 991px) {
+	.storybook-container {
+		max-width: 95%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.storybook-container {
+		max-width: 100%;
+	}
+}
+
+@media screen and (max-width: 479px) {
+	.storybook-container {
+		max-width: 100%;
+	}
+}
