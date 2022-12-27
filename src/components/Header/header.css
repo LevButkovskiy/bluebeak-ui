@@ -1,10 +1,6 @@
-@import "../../../src/globals.css";
-
-* {
-	--header-height: 60px;
-}
-
 .storybook-header {
+	--header-height: 60px;
+
 	position: static;
 	top: 0;
 	left: 0;

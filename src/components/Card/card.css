@@ -1,7 +1,9 @@
-@import "../../../src/globals.css";
-
 .storybook-card {
 	background: #fff;
 	border-radius: 12px;
 	padding: 16px;
+}
+
+.storybook-card--big {
+	padding: 20px 24px;
 }

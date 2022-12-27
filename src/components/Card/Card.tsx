@@ -5,11 +5,12 @@ import "./card.css"
 export interface CardProps {
 	children?: React.ReactNode
 	backgroundColor?: string
+	size?: "big" | "medium"
 }
 
-const Card = ({children, backgroundColor = "#fff", ...props}: CardProps) => {
+const Card = ({children, backgroundColor = "#fff", size = "medium", ...props}: CardProps) => {
 	return (
-		<div className={["storybook-card"].join(" ")} style={{backgroundColor}} {...props}>
+		<div className={["storybook-card", `storybook-card--${size}`].join(" ")} style={{backgroundColor}} {...props}>
 			{children}
 		</div>
 	)

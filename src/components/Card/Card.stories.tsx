@@ -10,5 +10,11 @@ export default {
 
 const Template: Story<CardProps> = (args) => <Card {...args}>children</Card>
 
-export const Primary = Template.bind({})
-Primary.args = {}
+export const Medium = Template.bind({})
+Medium.args = {}
+
+export const Big = Template.bind({})
+Big.args = {
+	...Medium.args,
+	size: "big",
+}
