@@ -1,7 +1,9 @@
 import React from "react"
+import Container from "../Container"
 import "./header.css"
 
 export interface HeaderProps {
+	logoUrl: string
 	/**
 	 * Is this the principal call to action on the page?
 	 */
@@ -10,10 +12,6 @@ export interface HeaderProps {
 	 * What background color to use
 	 */
 	backgroundColor?: string
-	/**
-	 * How large should the button be?
-	 */
-	size?: "small" | "medium" | "large"
 	/**
 	 * Button contents
 	 */
@@ -27,11 +25,15 @@ export interface HeaderProps {
 /**
  * Primary UI component for user interaction
  */
-const Header = ({primary = false, size = "medium", backgroundColor, label, ...props}: HeaderProps) => {
-	const mode = primary ? "storybook-button--primary" : "storybook-button--secondary"
+const Header = ({primary = false, logoUrl, backgroundColor, label, ...props}: HeaderProps) => {
 	return (
-		<header className={["storybook-header", `storybook-header--${size}`, mode].join(" ")} style={{backgroundColor}} {...props}>
-			<div className={["storybook-header-title"].join(" ")}>{label}</div>
+		<header className={["storybook-header"].join(" ")} style={{backgroundColor}} {...props}>
+			<Container>
+				<div className={["storybook-header-content"].join(" ")}>
+					<img className={["storybook-header-logo"].join(" ")} src={logoUrl} />
+					<div className={["storybook-header-title"].join(" ")}>{label}</div>
+				</div>
+			</Container>
 		</header>
 	)
 }
