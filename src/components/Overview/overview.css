@@ -1,0 +1,42 @@
+.storybook-overview {
+	--overview-padding: 16px;
+
+	display: flex;
+	align-items: center;
+
+	background: white;
+
+	padding: var(--overview-padding);
+	border-radius: 12px;
+
+	position: relative;
+}
+
+.storybook-overview-icon {
+	margin-right: var(--overview-padding);
+}
+
+.storybook-overview-postfix {
+	position: absolute;
+	right: var(--overview-padding);
+	bottom: var(--overview-padding);
+
+	font-size: 12px;
+	font-weight: 500;
+
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.storybook-overview-content-label {
+	font-size: 12px;
+	font-weight: 500;
+
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.storybook-overview-content-value {
+	margin-top: 4px;
+
+	font-size: 20px;
+	font-weight: 600;
+}

@@ -39,9 +39,9 @@ const JSONPreview = ({value = "", ...props}: JSONPreviewProps) => {
 				const value = _.get(object, key)
 
 				if (_.isObject(value)) {
-					return <ObjectPresentation title={key} value={parseObject(value, level + 1)} level={level} nested={true} />
+					return <ObjectPresentation key={key + level} title={key} value={parseObject(value, level + 1)} level={level} nested={true} />
 				}
-				return <ObjectPresentation title={key} value={JSON.stringify(value)} level={level} />
+				return <ObjectPresentation key={key + level} title={key} value={JSON.stringify(value)} level={level} />
 			})
 		}
 
