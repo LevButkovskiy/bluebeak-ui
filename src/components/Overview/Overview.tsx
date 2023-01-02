@@ -5,7 +5,7 @@ import "./overview.css"
 export interface OverviewProps {
 	value?: any
 	label: string
-	icon: string
+	icon: any
 	postfix: string
 }
 
